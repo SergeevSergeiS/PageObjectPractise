@@ -11,7 +11,7 @@ public class CalendarComponent {
         String month = StringUtils.capitalize(birth.getMonth().toString().toLowerCase());
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(String.valueOf(birth.getYear()));
-        if (birth.getDayOfMonth() < 10) {
+        if (birth.getDayOfMonth() < 10) {       //additional '0' is required if day is less than 10
             $(".react-datepicker__day--00" + birth.getDayOfMonth() + ":not(.react-datepicker__day--outside-month)").click();
         } else {
             $(".react-datepicker__day--0" + birth.getDayOfMonth() + ":not(.react-datepicker__day--outside-month)").click();
